@@ -1,0 +1,50 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh; /* Establece la altura de la sección para ocupar toda la altura de la ventana del navegador */
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .rounded-input {
+      border-radius: 20px; /* Controla la curvatura de los bordes */
+      padding: 15px; /* Añade espacio alrededor del texto dentro del campo de entrada */
+      border: 2px solid #ccc; /* Añade un borde con color gris claro */
+      font-size: 16px; /* Tamaño del texto */
+      outline: none; /* Elimina el resplandor del borde al enfocar el campo */
+      width: 100%; /* Establece el ancho del campo al 100% del contenedor */
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    color: #555; /* Color del ícono de búsqueda */
+    font-size: 18px; /* Tamaño del ícono de búsqueda */
+  }
+  
+  /* Opcional: Estilo cuando el campo está enfocado */
+  .rounded-input:focus {
+      border-color: #007bff; /* Cambia el color del borde al enfocar el campo */
+  }
+  
+  
+  .search-button i {
+    color: #555; /* Color del ícono de búsqueda */
+    font-size: 18px; /* Tamaño del ícono de búsqueda */
+  }
+  
+  /* Opcional: Estilo cuando el campo está enfocado */
+  .rounded-input:focus {
+      border-color: #007bff; /* Cambia el color del borde al enfocar el campo */
+  }

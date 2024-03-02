@@ -1,50 +1,100 @@
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh; /* Establece la altura de la sección para ocupar toda la altura de la ventana del navegador */
-  }
-  
-  .search-container {
-    position: relative;
-  }
-  
-  .rounded-input {
-      border-radius: 20px; /* Controla la curvatura de los bordes */
-      padding: 15px; /* Añade espacio alrededor del texto dentro del campo de entrada */
-      border: 2px solid #ccc; /* Añade un borde con color gris claro */
-      font-size: 16px; /* Tamaño del texto */
-      outline: none; /* Elimina el resplandor del borde al enfocar el campo */
-      width: 100%; /* Establece el ancho del campo al 100% del contenedor */
-  }
-  
-  .search-button {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .search-button i {
-    color: #555; /* Color del ícono de búsqueda */
-    font-size: 18px; /* Tamaño del ícono de búsqueda */
-  }
-  
-  /* Opcional: Estilo cuando el campo está enfocado */
-  .rounded-input:focus {
-      border-color: #007bff; /* Cambia el color del borde al enfocar el campo */
-  }
-  
-  
-  .search-button i {
-    color: #555; /* Color del ícono de búsqueda */
-    font-size: 18px; /* Tamaño del ícono de búsqueda */
-  }
-  
-  /* Opcional: Estilo cuando el campo está enfocado */
-  .rounded-input:focus {
-      border-color: #007bff; /* Cambia el color del borde al enfocar el campo */
-  }
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+header{
+  width: 100%;
+  height: 100%;
+  background-image:linear-gradient(45deg,#002f5c,#008cff); 
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-box{
+  background: #fff;
+  width: 90%;
+  max-width: 650px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  height: 85px;
+  position: relative;
+  overflow: hidden;
+
+}
+.search-box input{
+  flex: 1;
+  padding: 15px 10px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 20px;
+
+}
+
+.search-box button{
+  padding: 10px 12px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  cursor: pointer;
+
+}
+.slider{
+  position: absolute;
+  bottom: 0;
+  left: 400px;
+  animation: slider 6s linear infinite;
+
+}
+
+.slider div{
+  height: 85px;
+  display: flex;
+  align-items: center;
+
+}
+
+.slider i{
+  width: 25px;
+}
+
+@keyframes slider{
+  0% {transform:translateY(-85px);}
+  5% {transform:translateY(0px);}
+  30% {transform:translateY(0px);}
+  35% {transform:translateY(85px);}
+  65% {transform:translateY(85px);}
+  75% {transform:translateY(170px);}
+  10% {transform:translateY(170px);}
+}
+
+/* Estilo para la galería */
+#image-container.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 10px;
+    margin: 20px; /* Añadir un margen de 20px alrededor del contenedor de la galería */
+}
+
+/* Estilo para las imágenes en la galería */
+#image-container.gallery img {
+    width: 100%; /* Establecer el ancho al 100% del contenedor */
+    height: 300px; /* Establecer una altura fija */
+    object-fit: cover; /* Escalar las imágenes para que llenen el contenedor */
+}

@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="app.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Mz1SlV1UwptW/OFojBVG9I4dnC+d7+nKi0EZLwsL/jT5HTKlgLDX+pVVWws2vIFtiK7qbgqDm8+ZzL20dtKVyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 <body>
+  
+  <header>
+
     <div class="container">
-        <div class="search-container">
-          <input type="text" placeholder="Ingresa la categoría de la imagen" class="rounded-input">
-          <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-        </div>
+      
+        <form class="search-box" id="search-form">
+          
+            <input type="text" placeholder="Busca tus imágenes aquí" id="search-input">
+            <button type="submit"> <i class="fa-solid fa-magnifying-glass fa-2x"></i> </button>
+            <div class="slider">
+              
+              <div><i class="fa-solid fa-palette fa-2x"></i></div>
+              <div><i class="fa-solid fa-gamepad fa-2x"></i></div>
+              <div><i class="fa-solid fa-tree fa-2x"></i></div>             
+            </div>
+          
+          </form>
       </div>
+  </header>
+
+  <div id="image-container" class="gallery"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
 </body>
 </html>

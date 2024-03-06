@@ -98,3 +98,98 @@ header{
     height: 300px; /* Establecer una altura fija */
     object-fit: cover; /* Escalar las imágenes para que llenen el contenedor */
 }
+
+
+.gallery-link {
+  position: relative;
+  display: inline-block;
+}
+
+.gallery-link img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+
+.modal-container.open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998; /* Coloca la capa de fondo detrás del modal */
+  background-color: rgba(0, 0, 0, 0.5); /* Opacidad del fondo */
+  display: none; /* Oculta inicialmente la capa de fondo */
+}
+
+.overlay.visible {
+  display: block; /* Muestra la capa de fondo cuando sea necesario */
+}
+
+.modal-close-button {
+  background-color: #f70000;
+  border: none;
+  color: #f7f7f7;
+  font-size: 32px; /* Ajusta el tamaño de la fuente para agrandar la "x" */
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px; /* Establece el ancho y alto para el botón */
+  height: 40px;
+  border-radius: 50%; /* Hace que el borde sea circular */
+  border: 2px solid #fff; /* Agrega un borde blanco alrededor de la "x" */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-close-button:hover {
+  color: #000;
+  background-color: #fff; /* Cambia el color de fondo al pasar el cursor */
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
